@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        .log-design {
+            background-color: white;
+            margin: 5px 10px 0px 10px;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body class="bg-[F4F7FF] font-popins">
+    <header class="w-[1600px] mx-auto pt-2 pb-4">
+        <nav class="flex justify-between items-center bg-slate-100 rounded-md mt-8 p-4 mb-6">
+            <div class="flex items-center gap-2">
+                <img src="assets/logo.png" alt="logo">
+                <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center justify-between gap-2 rounded-xl bg-[#F4F7FF] p-2">
+                    <img class="w-6 h-6  " src="assets/checkbox.png" alt="checkbox">
+                    <p id="tTask" class="font-bold text-xl">23</p>
+                </div>
+                <button id="btn-bgchange" class="cursor-pointer"><img class="w-8 h-8" src="assets/theme-btn.png"
+                        alt="theme-btn"></button>
+            </div>
+        </nav>
+        <section class="grid grid-cols-4 gap-2">
+            <div class="col-span-3">
+                <div class="grid grid-cols-4 gap-5">
+                    <div class="p-6 flex items-center gap-3 rounded-md bg-[#F4F7FF]">
+                        <div class="bg-white rounded-full p-4 bg-white items-center justify-center">
+                            <img src="assets/checkbox.png" alt="">
+                        </div>
+                        <div>
+                            <h1>Task Assigned</h1>
+                            <p id="counter" class="font-bold text-3xl">6</p>
+                        </div>
+                    </div>
+                    <div
+                        class="col-span-2 flex gap-4 p-6 items-center rounded-md bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]">
+                        <div>
+                            <img src="assets/board.png" alt="board">
+                        </div>
+                        <div>
+                            <h1 class="text-3xl text-white">Discover Something <br>New Today!</h1>
+                        </div>
+                    </div>
+                    <div class="p-6 flex items-center justify-around rounded-md bg-[#F4F7FF]">
+                        <div class="bg-white rounded-full p-6"><img src="assets/calender.png" alt=""></div>
+                        <p class="font-bold text-3xl" id="today-date"></p>
+                    </div>
+                </div>
+                <div class="mt-4 grid grid-cols-3 gap-3">
+                    <div>
+                        <div class="rounded-lg px-6 py-4 bg-[#F4F7FF]">
+                            <div class="bg-white rounded-xl p-2 w-1/4">
+                                <h2>ShopEase</h2>
+                            </div>
+                            <h1 class="font-bold text-2xl">Fix Mobile Button</h1>
+                            <div class="rounded-lg bg-white p-2 my-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga distinctio
+                                    vero ex dolores enim quisquam autem. Nostrum, corporis placeat.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5>Deadline</h5>
+                                    <h3 class="font-bold">21 March 2025</h3>
+                                </div>
+                                <button class="btncmplt btn bg-blue-700 text-white cursor-pointer">Compleated</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rounded-lg px-6 py-4 bg-[#F4F7FF]">
+                            <div class="bg-white rounded-xl p-2 w-1/4">
+                                <h2>ShopEase</h2>
+                            </div>
+                            <h1 class="font-bold text-2xl">Fix Mobile Button</h1>
+                            <div class="rounded-lg bg-white p-2 my-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga distinctio
+                                    vero ex dolores enim quisquam autem. Nostrum, corporis placeat.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5>Deadline</h5>
+                                    <h3 class="font-bold">21 March 2025</h3>
+                                </div>
+                                <button class="btncmplt btn bg-blue-700 text-white cursor-pointer">Compleated</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rounded-lg px-6 py-4 bg-[#F4F7FF]">
+                            <div class="bg-white rounded-xl p-2 w-1/4">
+                                <h2>ShopEase</h2>
+                            </div>
+                            <h1 class="font-bold text-2xl">Fix Mobile Button</h1>
+                            <div class="rounded-lg bg-white p-2 my-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga distinctio
+                                    vero ex dolores enim quisquam autem. Nostrum, corporis placeat.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5>Deadline</h5>
+                                    <h3 class="font-bold">21 March 2025</h3>
+                                </div>
+                                <button class="btncmplt btn bg-blue-700 text-white cursor-pointer">Compleated</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rounded-lg px-6 py-4 bg-[#F4F7FF]">
+                            <div class="bg-white rounded-xl p-2 w-1/4">
+                                <h2>ShopEase</h2>
+                            </div>
+                            <h1 class="font-bold text-2xl">Fix Mobile Button</h1>
+                            <div class="rounded-lg bg-white p-2 my-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga distinctio
+                                    vero ex dolores enim quisquam autem. Nostrum, corporis placeat.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5>Deadline</h5>
+                                    <h3 class="font-bold">21 March 2025</h3>
+                                </div>
+                                <button class="btncmplt btn bg-blue-700 text-white cursor-pointer">Compleated</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rounded-lg px-6 py-4 bg-[#F4F7FF]">
+                            <div class="bg-white rounded-xl p-2 w-1/4">
+                                <h2>ShopEase</h2>
+                            </div>
+                            <h1 class="font-bold text-2xl">Fix Mobile Button</h1>
+                            <div class="rounded-lg bg-white p-2 my-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga distinctio
+                                    vero ex dolores enim quisquam autem. Nostrum, corporis placeat.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5>Deadline</h5>
+                                    <h3 class="font-bold">21 March 2025</h3>
+                                </div>
+                                <button class="btncmplt btn bg-blue-700 text-white cursor-pointer">Compleated</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rounded-lg px-6 py-4 bg-[#F4F7FF]">
+                            <div class="bg-white rounded-xl p-2 w-1/4">
+                                <h2>ShopEase</h2>
+                            </div>
+                            <h1 class="font-bold text-2xl">Fix Mobile Button</h1>
+                            <div class="rounded-lg bg-white p-2 my-4">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga distinctio
+                                    vero ex dolores enim quisquam autem. Nostrum, corporis placeat.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h5>Deadline</h5>
+                                    <h3 class="font-bold">21 March 2025</h3>
+                                </div>
+                                <button class="btncmplt btn bg-blue-700 text-white cursor-pointer">Compleated</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 text-center bg-[#F4F7FF] rounded-xl">
+                <div class="mx-auto mb-4">
+                    <div class="flex gap-2 justify-center mt-6 mb-4">
+                        <img src="assets/activity.png" alt="">
+                        <h1 class="font-bold text-2xl">Activity Log</h1>
+                    </div>
+                    <button id="clr-btn" class="btn bg-blue-700 text-white cursor-pointer mb-4">Clear History</button>
+                </div>
+                <div id="history-container">
+
+                </div>
+            </div>
+        </section>
+    </header>
+    <script src="scripts/randombg.js"></script>
+    <script src="scripts/activity.js"></script>
+</body>
+
+</html>
