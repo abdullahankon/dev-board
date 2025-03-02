@@ -38,14 +38,15 @@ clrBtn.addEventListener("click", function() {
   const currentDateElement = document.getElementById("today-date");
 
   function formatDate(date) {
-    const os = { day: 'numeric', month: 'short', year: 'numeric' };
+    const os = { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' };
     return date.toLocaleDateString('en-GB', os);
   }
   
   function displayDate() {
     const today = new Date();
     const formattedDate = formatDate(today);
-    currentDateElement.textContent = formattedDate;
+    const formattedDateWithBreak = formattedDate.replace(", ", "<br>");
+    currentDateElement.innerHTML = formattedDateWithBreak;
   }
   
   displayDate();
